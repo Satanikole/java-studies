@@ -6,5 +6,6 @@ public class CriaConta {
 
     Conta segundaConta = new Conta();
     segundaConta.saldo = 80;
+    System.out.println(segundaConta.titular);
   }
 }
