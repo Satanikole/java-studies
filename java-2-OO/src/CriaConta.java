@@ -2,13 +2,14 @@ public class CriaConta {
   public static void main(String[] args) {
 
     Cliente naruto = new Cliente();
-    naruto.nome = "Naruto Uzumaki";
-    naruto.cpf = "111.111.111-11";
-    naruto.profissao = "Hokage";
+
+    naruto.setNome("Naruto Uzumaki");
+    naruto.setCpf("222.222.222-22");
+    naruto.setProfissao("hokage");
 
     Conta contaNaruto = new Conta();
     contaNaruto.depositar(6666);
-    contaNaruto.titular = naruto;
-    System.out.println(contaNaruto.titular.nome);
+    contaNaruto.setTitular(naruto);
+    System.out.println(contaNaruto.getTitular().getNome());
   }
 }
