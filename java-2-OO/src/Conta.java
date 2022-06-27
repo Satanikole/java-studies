@@ -2,7 +2,7 @@ class Conta {
   double saldo;
   int agencia;
   int numero;
-  String titular;
+  Cliente titular;
   
   public void depositar(double valor ) {
     saldo += valor;
@@ -17,4 +17,13 @@ class Conta {
      }
   }
 
+  public boolean transfere(double valor, Conta destino ) {
+     if(saldo >= valor) {
+       saca(valor);
+       destino.depositar(valor);
+       return true;
+     } else {
+      return false;
+     }
+  }
 }
