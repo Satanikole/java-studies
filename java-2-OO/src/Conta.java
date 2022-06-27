@@ -1,7 +1,7 @@
 class Conta {
   private double saldo;
-  int agencia;
-  int numero;
+  private int agencia;
+  private int numero;
   Cliente titular;
   
   public void depositar(double valor ) {
@@ -29,5 +29,21 @@ class Conta {
 
   public double getSaldo() {
     return saldo;
+  }
+
+  public int getNumero() {
+    return numero;
+  }
+
+  public void setNumero(int num) {
+      numero = num;
+  }
+
+  public int getAgencia() {
+    return agencia;
+  }
+
+  public void setAgencia(int agen) {
+    agencia = agen;
   }
 }
