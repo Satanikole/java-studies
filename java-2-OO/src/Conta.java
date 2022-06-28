@@ -3,10 +3,14 @@ class Conta {
   private int agencia;
   private int numero;
   private Cliente titular;
+  private static int totalDeContas;
 
   public Conta(int agencia, int numero) {
     this.agencia = agencia;
     this.numero = numero;
+    totalDeContas +=1;
+    System.out.printf("O total de contas é %d", totalDeContas);
+
   }
   
   public void depositar(double valor ) {
@@ -40,25 +44,25 @@ class Conta {
     return numero;
   }
 
-  public void setNumero(int num) {
-    if(num <= 0) {
-      System.out.println("Proibido valores menores do que 1");
-      return; 
-    }
-      numero = num;
-  }
+  // public void setNumero(int num) {
+  //   if(num <= 0) {
+  //     System.out.println("Proibido valores menores do que 1");
+  //     return; 
+  //   }
+  //     numero = num;
+  // }
 
   public int getAgencia() {
     return agencia;
   }
 
-  public void setAgencia(int agen) {
-    if(agen <= 0) {
-      System.out.println("Proibido valores menores do que 1");
-      return; 
-    }
-    agencia = agen;
-  }
+  // public void setAgencia(int agen) {
+  //   if(agen <= 0) {
+  //     System.out.println("Proibido valores menores do que 1");
+  //     return; 
+  //   }
+  //   agencia = agen;
+  // }
 
   public Cliente getTitular() {
     return titular;
@@ -66,6 +70,10 @@ class Conta {
 
   public void setTitular(Cliente titular) {
     this.titular = titular;
+  }
+
+  public static int getTotalContas() {
+    return Conta.totalDeContas;
   }
 
 }
