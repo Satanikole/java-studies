@@ -2,8 +2,12 @@ public class Funcionario {
 
  private String nome;
  private String cpf;
- private static double salario;
+ protected static double salario;
  private static int cargo = 0;
+
+ public double getBonificacao() {
+    return Funcionario.salario * 0.1;
+  }
 
  public int getCargo() {
    return cargo;
