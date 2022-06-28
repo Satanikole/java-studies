@@ -2,10 +2,24 @@ public class Funcionario {
 
  private String nome;
  private String cpf;
- private double salario;
+ private static double salario;
+ private static int cargo = 0;
 
  public double getBonus() {
-    return this.salario * 0.1;
+    if(Funcionario.cargo == 0) {
+        return Funcionario.salario * 0.1;
+    } else if (Funcionario.cargo == 1) {
+        return Funcionario.salario;
+    }
+    return Funcionario.salario + 1000;
+ }
+
+ public int getCargo() {
+   return cargo;
+ }
+
+ public void setCargo(int cargo) {
+   Funcionario.cargo = cargo;
  }
 
 public String getNome() {
@@ -24,7 +38,7 @@ public double getSalario() {
     return salario;
 }
 public void setSalario(double salario) {
-    this.salario = salario;
+    Funcionario.salario = salario;
 } 
 
  
