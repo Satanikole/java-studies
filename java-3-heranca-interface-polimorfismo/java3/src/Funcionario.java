@@ -5,15 +5,6 @@ public class Funcionario {
  private static double salario;
  private static int cargo = 0;
 
- public double getBonus() {
-    if(Funcionario.cargo == 0) {
-        return Funcionario.salario * 0.1;
-    } else if (Funcionario.cargo == 1) {
-        return Funcionario.salario;
-    }
-    return Funcionario.salario + 1000;
- }
-
  public int getCargo() {
    return cargo;
  }
