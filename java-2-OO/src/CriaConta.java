@@ -7,7 +7,7 @@ public class CriaConta {
     naruto.setCpf("222.222.222-22");
     naruto.setProfissao("hokage");
 
-    Conta contaNaruto = new Conta();
+    Conta contaNaruto = new Conta(1234, 776);
     contaNaruto.depositar(6666);
     contaNaruto.setTitular(naruto);
     System.out.println(contaNaruto.getTitular().getNome());
