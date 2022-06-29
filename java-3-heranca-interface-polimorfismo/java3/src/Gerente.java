@@ -1,4 +1,4 @@
-public class Gerente extends FuncionarioAutenticavel {
+public class Gerente implements Autenticavel {
   private int senha;
 
   public void setSenha(int senha) {
@@ -14,5 +14,13 @@ public class Gerente extends FuncionarioAutenticavel {
 
   public double getBonificacao() {
     return Funcionario.salario;
+  }
+
+  @Override
+  public boolean autentica(int senha) {
+    if(this.senha == senha) {
+      return true;
+    }
+    return false;
   }
 }
